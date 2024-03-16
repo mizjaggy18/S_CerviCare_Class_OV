@@ -1,8 +1,8 @@
 {
-  "name": "S_CerviCare_Class",
+  "name": "S_CerviCare_Class_OV",
   "description": "Classification of pap smear to Normal and Abnormal (Cervical Cancer)",
   "container-image": {
-    "image": "mizjaggy18/s_cervicare_class",
+    "image": "mizjaggy18/s_cervicare_class_ov",
     "type": "singularity"
   },
   "command-line": "echo [CYTOMINE_HOST] [CYTOMINE_PUBLIC_KEY] [CYTOMINE_PRIVATE_KEY] [CYTOMINE_ID_PROJECT] [CYTOMINE_ID_SOFTWARE] [CYTOMINE_ID_IMAGES] [CYTOMINE_ID_ROI_TERM] [CYTOMINE_ID_CELL_TERM] [CYTOMINE_ID_C0_TERM] [CYTOMINE_ID_C1_TERM] [BATCH_SIZE]",
