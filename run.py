@@ -19,6 +19,7 @@ from __future__ import print_function, unicode_literals, absolute_import, divisi
 
 import sys
 import numpy as np
+from pathlib import Path
 import os
 import cytomine
 from shapely.geometry import shape, box, Polygon,Point
@@ -63,10 +64,14 @@ def run(cyto_job, parameters):
     start_time=time.time()
 
     # ----- load network ----
-    modelname = "/models/cervicare-2class_dn21adam_best_model_100ep.pth"
+    # modelname = "/models/cervicare-2class_dn21adam_best_model_100ep.pth"
+    DIRECTORY_NAME = "./models"
+    BASE_MODEL_NAME = "/cervicare-2class_dn21adam_best_model_100ep"
+    weights_path = Path(DIRECTORY_NAME + BASE_MODEL_NAME + ".pth")
+    
 
     # Paths where ONNX and OpenVINO IR models will be stored.
-    ir_path = modelname.with_suffix(".xml")
+    ir_path = weights_path.with_suffix(".xml")
 
     # Instantiate OpenVINO Core
     core = ov.Core()
