@@ -22,7 +22,7 @@ RUN apt-get -y install python3-pip
 # RUN --gpus all nvidia/cuda:11.4.0-base-ubuntu18.04 nvidia-smi
 
 FROM cytomine/software-python3-base:v2.2.0
-FROM cytomine/software-python3-base
+# FROM cytomine/software-python3-base
 
 #INSTALL
 RUN pip install torch==2.2.0
@@ -47,7 +47,7 @@ ADD descriptor.json /app/descriptor.json
 ADD run.py /app/run.py
 
 # Set environment variables for GPU support
-ENV NVIDIA_VISIBLE_DEVICES all
-ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
+# ENV NVIDIA_VISIBLE_DEVICES all
+# ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 
 ENTRYPOINT ["python3", "/app/run.py"]
