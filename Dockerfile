@@ -29,8 +29,10 @@ RUN pip install torch==2.2.0
 RUN pip install torchvision==0.17.0
 RUN pip install openvino==2023.3.0
 RUN pip install openvino-telemetry==2023.2.1
-RUN pip install opencv-python-headless==4.9.0.80
-RUN pip install opencv-contrib-python-headless==4.9.0.80
+# RUN pip install opencv-python-headless==4.9.0.80
+# RUN pip install opencv-contrib-python-headless==4.9.0.80
+RUN pip install opencv-python-headless
+RUN pip install opencv-contrib-python-headless
 RUN pip install tqdm
 RUN pip install numpy
 RUN pip install shapely
