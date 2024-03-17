@@ -12,8 +12,8 @@
 # * See the License for the specific language governing permissions and
 # * limitations under the License.
 
-FROM nvidia/cuda:11.4.0-cudnn8-devel-ubuntu18.04
-CMD nvidia-smi
+# FROM nvidia/cuda:11.4.0-cudnn8-devel-ubuntu18.04
+# CMD nvidia-smi
 
 RUN apt-get update && apt-get install --no-install-recommends --no-install-suggests -y curl
 RUN apt-get install unzip
@@ -22,7 +22,7 @@ RUN apt-get -y install python3-pip
 # RUN --gpus all nvidia/cuda:11.4.0-base-ubuntu18.04 nvidia-smi
 
 FROM cytomine/software-python3-base:v2.2.0
-# FROM cytomine/software-python3-base
+FROM cytomine/software-python3-base
 
 #INSTALL
 RUN pip install torch==2.2.0
