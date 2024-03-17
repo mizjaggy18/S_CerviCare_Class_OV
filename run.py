@@ -65,13 +65,14 @@ def run(cyto_job, parameters):
 
     # ----- load network ----
     # modelname = "/models/cervicare-2class_dn21adam_best_model_100ep.pth"
-    DIRECTORY_NAME = "./models"
-    BASE_MODEL_NAME = "/cervicare-2class_dn21adam_best_model_100ep"
-    weights_path = Path(DIRECTORY_NAME + BASE_MODEL_NAME + ".pth")
+    # DIRECTORY_NAME = "./models"
+    # BASE_MODEL_NAME = "/cervicare-2class_dn21adam_best_model_100ep"
+    # weights_path = Path(DIRECTORY_NAME + BASE_MODEL_NAME + ".pth")
     
 
     # Paths where ONNX and OpenVINO IR models will be stored.
-    ir_path = weights_path.with_suffix(".xml")
+    # ir_path = weights_path.with_suffix(".xml")
+    ir_path = "/models/cervicare-2class_dn21adam_best_model_100ep.xml"
 
     # Instantiate OpenVINO Core
     core = ov.Core()
