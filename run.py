@@ -169,9 +169,9 @@ def run(cyto_job, parameters):
 
                 im = cv2.cvtColor(cv2.imread(roi_png_filename),cv2.COLOR_BGR2RGB)
                 im = cv2.resize(im,(224,224))
-                im = im.reshape(-1,224,224,3)
+                arr_out = im.reshape(-1,224,224,3)
                 output = np.zeros((0,num_classes))
-                arr_out = torch.from_numpy(arr_out.transpose(0, 3, 1, 2))
+                arr_out = torch.from_numpy(arr_out.transpose(0, 3, 1, 2))                
                 output_batch = compiled_model([arr_out])[output_layer]
                 output = np.append(output, output_batch, axis=0)
                 pred_labels = np.argmax(output, axis=1)
