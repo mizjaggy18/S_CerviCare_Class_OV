@@ -86,7 +86,7 @@ def run(cyto_job, parameters):
 
     # ------------------------
 
-    print(f"Model successfully loaded! Total params: \t{sum([np.prod(p.size()) for p in model.parameters()])}")
+    print("Model successfully loaded!")
     job.update(status=Job.RUNNING, progress=20, statusComment=f"Model successfully loaded!")
 
     #Select images to process
